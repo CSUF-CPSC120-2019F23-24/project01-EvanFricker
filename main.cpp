@@ -2,6 +2,7 @@
 // This program calculates and displays business expenses.
 #include <iostream>
 #include <string>
+#include <iomanip>
 
 int main()
  {
@@ -27,6 +28,11 @@ int main()
   std::cin >> meal;
   std::cout << '\n';
 
-  std::cout << "Location" << '\t'<< "Days" << '\t' << "Hotel" << '\t' << "Food" << '\t' <<"Total" << '\n';
+  //Calculation the total
+  total = meal + hotel;
+
+  //Displaying all the information
+  std::cout << std::setw(10) << "Location" << std::setw(10) << "Days" << std::setw(17) << "Hotel Expenses" << std::setw(17) << "Food Expenses" << std::setw(10) << "Total" << '\n';
+  std::cout << std::setw(10) << location << std::setw(10) << days << std::setw(17) <<  hotel << std::setw(17) <<  meal << std::setw(10) <<  total << '\n';
   return 0;
 }
